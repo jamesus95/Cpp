@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1390735673 source:c:\users\james_000\dropbox\university of washington work\14.1 winter\css342\lab2\lab2main.cpp
+	"SortSetArray.h"
+	"SortSetList.h"
+	<ctime>
+
+1390627129 source:c:\users\james_000\dropbox\university of washington work\14.1 winter\css342\lab2\lab2test.cpp
+	"SortSetArray.h"
+	"SortSetList.h"
+	<fstream>
+	<iomanip>
+	<string.h>
+
+1390623768 source:c:\users\james_000\dropbox\university of washington work\14.1 winter\css342\lab2\sortsetlist.cpp
+	"SortSetList.h"
+
+1390701162 source:c:\users\james_000\dropbox\university of washington work\14.1 winter\css342\lab2\sortsetarray.cpp
+	"SortSetArray.h"
+
+1390610739 c:\users\james_000\dropbox\university of washington work\14.1 winter\css342\lab2\sortsetarray.h
+	<iostream>
+
+1389931046 c:\users\james_000\dropbox\university of washington work\14.1 winter\css342\lab2\sortsetarray.cpp
+	"SortSetArray.h"
+
+1390442381 source:c:\users\james_000\dropbox\university of washington work\14.1 winter\css342\lab2\sortsetarray2.cpp
+
+1390442381 source:f:\dropbox\university of washington work\14.1 winter\css342\lab2\sortsetarray2.cpp
+
+1390623768 source:f:\dropbox\university of washington work\14.1 winter\css342\lab2\sortsetlist.cpp
+	"SortSetList.h"
+
+1390701113 source:f:\dropbox\university of washington work\14.1 winter\css342\lab2\lab2main.cpp
+	"SortSetArray.h"
+	"SortSetList.h"
+	<ctime>
+
+1390699779 source:f:\dropbox\university of washington work\14.1 winter\css342\lab2\lab2test.cpp
+
+1390610739 f:\dropbox\university of washington work\14.1 winter\css342\lab2\sortsetarray.h
+	<iostream>
+
+1390701162 source:f:\dropbox\university of washington work\14.1 winter\css342\lab2\sortsetarray.cpp
+	"SortSetArray.h"
+
+1390623781 c:\users\james_000\dropbox\university of washington work\14.1 winter\css342\lab2\sortsetlist.h
+	"Node.h"
+	<iostream>
+
+1390610674 c:\users\james_000\dropbox\university of washington work\14.1 winter\css342\lab2\node.h
+	<iostream>
+
+1390610713 source:c:\users\james_000\dropbox\university of washington work\14.1 winter\css342\lab2\node.cpp
+	"Node.h"
+
+1390623781 f:\dropbox\university of washington work\14.1 winter\css342\lab2\sortsetlist.h
+	"Node.h"
+	<iostream>
+
+1390610674 f:\dropbox\university of washington work\14.1 winter\css342\lab2\node.h
+	<iostream>
+
+1390610713 source:f:\dropbox\university of washington work\14.1 winter\css342\lab2\node.cpp
+	"Node.h"
+

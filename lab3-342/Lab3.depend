@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1391804565 source:c:\users\james_000\dropbox\university of washington work\14.1 winter\css342\lab3\comparelist.cpp
+	"compareList.h"
+
+1391806705 source:c:\users\james_000\dropbox\university of washington work\14.1 winter\css342\lab3\data.cpp
+	"data.h"
+
+1391807833 source:c:\users\james_000\dropbox\university of washington work\14.1 winter\css342\lab3\lab3main.cpp
+	"compareList.h"
+	<iostream>
+	<fstream>
+
+1391566721 source:c:\users\james_000\dropbox\university of washington work\14.1 winter\css342\lab3\node.cpp
+	"node.h"
+
+1391806276 source:c:\users\james_000\dropbox\university of washington work\14.1 winter\css342\lab3\lab3testmain.cpp
+
+1391734469 c:\users\james_000\dropbox\university of washington work\14.1 winter\css342\lab3\comparelist.h
+	"node.h"
+	<iostream>
+
+1391566722 c:\users\james_000\dropbox\university of washington work\14.1 winter\css342\lab3\node.h
+	"data.h"
+
+1391743860 c:\users\james_000\dropbox\university of washington work\14.1 winter\css342\lab3\data.h
+	<cstddef>
+	<iostream>
+
+1392006841 source:f:\dropbox\university of washington work\14.1 winter\css342\lab3\comparelist.cpp
+	"compareList.h"
+
+1391998215 f:\dropbox\university of washington work\14.1 winter\css342\lab3\comparelist.h
+	"node.h"
+	<iostream>
+	<fstream>
+
+1391305170 f:\dropbox\university of washington work\14.1 winter\css342\lab3\node.h
+	"data.h"
+
+1391998252 f:\dropbox\university of washington work\14.1 winter\css342\lab3\data.h
+	<cstddef>
+	<iostream>
+
+1391806276 source:f:\dropbox\university of washington work\14.1 winter\css342\lab3\lab3testmain.cpp
+
+1392006865 source:f:\dropbox\university of washington work\14.1 winter\css342\lab3\data.cpp
+	"data.h"
+
+1392006896 source:f:\dropbox\university of washington work\14.1 winter\css342\lab3\node.cpp
+	"node.h"
+
+1392003447 source:f:\dropbox\university of washington work\14.1 winter\css342\lab3\lab3main.cpp
+

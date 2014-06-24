@@ -1,0 +1,180 @@
+Target: s0.txt  666 Bytes
+(h, 2), (e, 3), (char#32, 5), (u, 13), (n, 89), (h, 233)
+
+Prospect: c1.txt  149712 Bytes
+(L, 2), (L, 3), (char#32, 5), (A, 13), (R, 89), (n, 233), (m, 1597), (char#32, 28657)
+DIFF  DIFF  MATCH DIFF  DIFF  DIFF  
+16.6667 percent match
+
+Prospect: c2.txt  139847 Bytes
+(S, 2), (char#32, 3), (O, 5), (I, 13), (e, 89), (char#32, 233), (b, 1597), (char#32, 28657)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: c3.txt  94796 Bytes
+(H, 2), (E, 3), (C, 5), (F, 13), (E, 89), (O, 233), (c, 1597), (m, 28657)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: c4.txt  113400 Bytes
+(H, 2), (E, 3), (T, 5), (L, 13), (char#32, 89), (f, 233), (i, 1597), (char#32, 28657)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: c5.txt  134171 Bytes
+(U, 2), (C, 3), (char#32, 5), (U, 13), (r, 89), (o, 233), (e, 1597), (l, 28657)
+DIFF  DIFF  MATCH DIFF  DIFF  DIFF  
+16.6667 percent match
+
+Prospect: c6.txt  139272 Bytes
+(H, 2), (E, 3), (T, 5), (F, 13), (s, 89), (n, 233), (char#32, 1597), (m, 28657)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: c7.txt  111191 Bytes
+(char#32, 2), (M, 3), (D, 5), (N, 13), (S, 89), (v, 233), (w, 1597), (M, 28657)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: c8.txt  176826 Bytes
+(H, 2), (E, 3), (H, 5), (O, 13), (char#32, 89), (j, 233), (char#32, 1597), (l, 28657)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: h1.txt  198374 Bytes
+(I, 2), (N, 3), (char#32, 5), (char#32, 13), (char#13, 89), (K, 233), (C, 1597), (i, 28657)
+DIFF  DIFF  MATCH DIFF  DIFF  DIFF  
+16.6667 percent match
+
+Prospect: h2.txt  171783 Bytes
+(H, 2), (E, 3), (L, 5), (K, 13), (char#32, 89), (char#32, 233), (,, 1597), (char#32, 28657)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: license.txt  21535 Bytes
+(<, 2), (T, 3), (I, 5), (R, 13), (0, 89), (H, 233), (s, 1597)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: s0.txt  666 Bytes
+(h, 2), (e, 3), (char#32, 5), (u, 13), (n, 89), (h, 233)
+MATCH MATCH MATCH MATCH MATCH MATCH 
+100 percent match
+
+Prospect: s1.txt  670 Bytes
+(h, 2), (e, 3), (char#32, 5), (i, 13), (d, 89), (char#10, 233)
+MATCH MATCH MATCH DIFF  DIFF  DIFF  
+50 percent match
+
+Prospect: s2.txt  104879 Bytes
+(», 2), (¿, 3), (char#32, 5), (char#32, 13), (t, 89), (,, 233), (char#32, 1597), (s, 28657)
+DIFF  DIFF  MATCH DIFF  DIFF  DIFF  
+16.6667 percent match
+
+Prospect: s3.txt  627 Bytes
+(n, 2), (t, 3), (r, 5), (v, 13), (e, 89), (o, 233)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: s4.txt  662 Bytes
+(h, 2), (o, 3), (e, 5), (t, 13), (l, 89), (char#32, 233)
+MATCH DIFF  DIFF  DIFF  DIFF  DIFF  
+16.6667 percent match
+
+Prospect: s5.txt  654 Bytes
+(h, 2), (e, 3), (char#32, 5), (char#32, 13), (char#32, 89), (h, 233)
+MATCH MATCH MATCH DIFF  DIFF  MATCH 
+66.6667 percent match
+
+Prospect: s6.txt  623 Bytes
+(o, 2), (char#32, 3), (n, 5), (i, 13), (char#32, 89), (n, 233)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: s7.txt  686 Bytes
+(u, 2), (s, 3), (c, 5), (r, 13), (char#32, 89), (-, 233)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: s8.txt  661 Bytes
+(s, 2), (char#32, 3), (t, 5), (a, 13), (A, 89), (char#32, 233)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: s9.txt  661 Bytes
+(o, 2), (r, 3), (s, 5), (n, 13), (G, 89), (char#32, 233)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: s10.txt  720 Bytes
+(s, 2), (char#32, 3), (a, 5), (h, 13), (u, 89), (s, 233)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: s11.txt  666 Bytes
+(h, 2), (e, 3), (char#32, 5), (u, 13), (n, 89), (h, 233)
+MATCH MATCH MATCH MATCH MATCH MATCH 
+100 percent match
+
+Prospect: s12.txt  646 Bytes
+(char#32, 2), (t, 3), (a, 5), (e, 13), (l, 89), (l, 233)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: s13.txt  632 Bytes
+(o, 2), (t, 3), (f, 5), (char#32, 13), (char#32, 89), (a, 233)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: s154.txt  105571 Bytes
+(», 2), (¿, 3), (char#32, 5), (char#32, 13), (b, 89), (h, 233), (b, 1597), (e, 28657)
+DIFF  DIFF  MATCH DIFF  DIFF  MATCH 
+33.3333 percent match
+
+Prospect: t0.txt  200332 Bytes
+(H, 2), (E, 3), (T, 5), (O, 13), (s, 89), (m, 233), (char#13, 1597), (u, 28657)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: t1.txt  172229 Bytes
+(H, 2), (E, 3), (T, 5), (O, 13), (char#13, 89), (U, 233), (), 1597), (char#32, 28657)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: t2.txt  185266 Bytes
+(H, 2), (E, 3), (T, 5), (O, 13), (M, 89), (char#32, 233), (a, 1597), (char#32, 28657)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: t3.txt  180949 Bytes
+(Y, 2), (M, 3), (E, 5), (char#10, 13), (t, 89), (e, 233), (a, 1597), (char#32, 28657)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: t4.txt  200332 Bytes
+(H, 2), (E, 3), (T, 5), (O, 13), (s, 89), (m, 233), (char#13, 1597), (u, 28657)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: t5.txt  179033 Bytes
+(H, 2), (E, 3), (T, 5), (O, 13), (e, 89), (t, 233), (d, 1597), (char#32, 28657)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: t6.txt  158901 Bytes
+(H, 2), (E, 3), (T, 5), (O, 13), (C, 89), (t, 233), (char#32, 1597), (e, 28657)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: t7.txt  131642 Bytes
+(H, 2), (E, 3), (T, 5), (O, 13), (I, 89), (T, 233), (L, 1597), (., 28657)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+Prospect: t8.txt  118905 Bytes
+(H, 2), (E, 3), (T, 5), (O, 13), (char#32, 89), (b, 233), (char#32, 1597), (char#32, 28657)
+DIFF  DIFF  DIFF  DIFF  DIFF  DIFF  
+0 percent match
+
+
+

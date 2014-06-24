@@ -1,0 +1,33 @@
+operators (+, *, -, =, +=, *=, -=, ==, !=, <<, >>)
+return Class::operator<symbol here>(params) {}
+<</>>
+return operator<symbol here>(params) {}
+
+insert
+remove
+isEmpty
+isInSet
+return Class::FunctionName(params) {}
+
+constructors (empty, up to 5 inputs, copy) use = to help copy
+Class::Class(params) {}
+destructor
+Class::~Class() {}
+
+CLASS VARIABLES
+private:
+    size
+
+class ClassName {}
+
+write
+SortSetArray.h SortSetList.h
+    include doxy comments here
+    no doxy comments on privates
+    include prototypes, includes, and namespace here
+SortSetArray.cpp SortSetList.cpp
+    implementations here
+    developer comments here
+lab2ain.cpp
+    include .h
+lab2test.cpp

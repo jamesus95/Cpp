@@ -1,0 +1,123 @@
+Script started on Sun 09 Feb 2014 08:45:10 PM PST
+murphs95@uw1-320-10:~/Desktop/Lab3$ g++ -QW[K[KQa[K[KQ[KWall .[K*.cpp
+murphs95@uw1-320-10:~/Desktop/Lab3$ valgrind ./a.out
+==14991== Memcheck, a memory error detector
+==14991== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==14991== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==14991== Command: ./a.out
+==14991== 
+Testing CompareList functions
+Testing insert
+Inserted D and 9
+Inserted C and 99
+Inserted H and 999
+Inserted J and 9999
+Inserted C and 99999
+Inserted > and 999999
+(D, 9), (C, 99), (H, 999), (J, 9999), (C, 99999), (M, 999999)
+
+Inserted A and 9.  Expected to not be inserted
+Inserted A and 999. Expected to not be inserted
+(D, 9), (C, 99), (H, 999), (J, 9999), (C, 99999), (M, 999999)
+
+Insert A and -1.  Expected to not be inserted
+(D, 9), (C, 99), (H, 999), (J, 9999), (C, 99999), (M, 999999)
+
+Inserting characters 1-255 at indexes 1-255.Expected to exclude 9 and 99
+(D, 9), (C, 99), (H, 999), (J, 9999), (C, 99999), (M, 999999), (char#1, 1), (char#2, 2), (char#3, 3), (char#4, 4), (char#5, 5), (char#6, 6), (char#7, 7), (char#8, 8), (char#10, 10), (char#11, 11), (char#12, 12), (char#13, 13), (char#14, 14), (char#15, 15), (char#16, 16), (char#17, 17), (char#18, 18), (char#19, 19), (char#20, 20), (char#21, 21), (char#22, 22), (char#23, 23), (char#24, 24), (char#25, 25), (char#26, 26), (char#27, 27), (char#28, 28), (char#29, 29), (char#30, 30), (char#31, 31), (char#32, 32), (!, 33), (", 34), (#, 35), ($, 36), (%, 37), (&, 38), (', 39), ((, 40), (), 41), (*, 42), (+, 43), (,, 44), (-, 45), (., 46), (/, 47), (0, 48), (1, 49), (2, 50), (3, 51), (4, 52), (5, 53), (6, 54), (7, 55), (8, 56), (9, 57), (:, 58), (;, 59), (<, 60), (=, 61), (>, 62), (?, 63), (@, 64), (A, 65), (B, 66), (C, 67), (D, 68), (E, 69), (F, 70), (G, 71), (H, 72), (I, 73), (J, 74), (K, 75), (L, 76), (M, 77), (N, 78), (O, 79), (P, 80), (Q, 81), (R, 82), (S, 83), (T, 84), (U, 85), (V, 86), (W, 87), (X, 88), (Y, 89), (Z, 90), ([, 91), (\, 92), (], 93), (^, 94), (_, 95), (`, 96), (a, 97), (b, 98), (d, 100), (e, 101), (f, 102), (g, 103), (h, 104), (i, 105), (j, 106), (k, 107), (l, 108), (m, 109), (n, 110), (o, 111), (p, 112), (q, 113), (r, 114), (s, 115), (t, 116), (u, 117), (v, 118), (w, 119), (x, 120), (y, 121), (z, 122), ({, 123), (|, 124), (}, 125), (~, 126), (char#127, 127), (Ä, 128), (Å, 129), (Ç, 130), (É, 131), (Ñ, 132), (Ö, 133), (Ü, 134), (á, 135), (à, 136), (â, 137), (ä, 138), (ã, 139), (å, 140), (ç, 141), (é, 142), (è, 143), (ê, 144), (ë, 145), (í, 146), (ì, 147), (î, 148), (ï, 149), (ñ, 150), (ó, 151), (ò, 152), (ô, 153), (ö, 154), (õ, 155), (ú, 156), (ù, 157), (û, 158), (ü, 159), (†, 160), (°, 161), (¢, 162), (£, 163), (§, 164), (•, 165), (¶, 166), (ß, 167), (®, 168), (©, 169), (™, 170), (´, 171), (¨, 172), (≠, 173), (Æ, 174), (Ø, 175), (∞, 176), (±, 177), (≤, 178), (≥, 179), (¥, 180), (µ, 181), (∂, 182), (∑, 183), (∏, 184), (π, 185), (∫, 186), (ª, 187), (º, 188), (Ω, 189), (æ, 190), (ø, 191), (¿, 192), (¡, 193), (¬, 194), (√, 195), (ƒ, 196), (≈, 197), (∆, 198), («, 199), (», 200), (…, 201), ( , 202), (À, 203), (Ã, 204), (Õ, 205), (Œ, 206), (œ, 207), (–, 208), (—, 209), (“, 210), (”, 211), (‘, 212), (’, 213), (÷, 214), (◊, 215), (ÿ, 216), (Ÿ, 217), (⁄, 218), (€, 219), (‹, 220), (›, 221), (ﬁ, 222), (ﬂ, 223), (‡, 224), (·, 225), (‚, 226), („, 227), (‰, 228), (Â, 229), (Ê, 230), (Á, 231), (Ë, 232), (È, 233), (Í, 234), (Î, 235), (Ï, 236), (Ì, 237), (Ó, 238), (Ô, 239), (, 240), (Ò, 241), (Ú, 242), (Û, 243), (Ù, 244), (ı, 245), (ˆ, 246), (˜, 247), (¯, 248), (˘, 249), (˙, 250), (˚, 251), (¸, 252), (˝, 253), (˛, 254), (ˇ, 255)
+
+Testing remove
+Remove characters 1-255 at indexes 1-255
+Tests remove and removing an index with incorrect character
+(D, 9), (C, 99), (H, 999), (J, 9999), (C, 99999), (M, 999999)
+Removes at indexes -1, 9999999, and 999 w/wrong char.Expect to do nothing
+(D, 9), (C, 99), (H, 999), (J, 9999), (C, 99999), (M, 999999)
+
+Removes all nodes in odd orderand tests removing when empty.
+Test: 
+
+Testing ==/!=
+Inserted A 1 and B 2 into testList 2 and 3
+also tests node and data == and !=
+testList 2 == 3 1 : should be 1
+testList 2 != 3 0 : should be 0
+Test copy constructor for compareList and Data
+testList1 == copy of testList1 (testList4)
+1 : should be 1
+Test when not equal
+remove B 2 from 3
+testList 2 == 3 0 : should be 0
+testList 2 != 3 1 : should be 1
+
+Testing =
+testList2 = testList  check to see if equal
+1 : should be 1
+
+(a, 1), (b, 2)
+(a, 1), (b, 2)
+MATCH    MATCH    
+100 percent match
+
+
+Testing Data functions
+testing Data basic constructorwith A 10 and Data << operator
+should be (A, 10) : (A, 10)
+Test Data Remove : (char#0, -1)
+TestData Insert B 20 : (B, 20)
+testing Data copy constructor with first Data
+should be (B, 20) : (B, 20)
+Test equals and not equals
+Data=(A, 10) Data2=(B, 20)
+Data == Data2 is 0
+Data != Data2 is 1
+false = 0  true = 1
+Test less than
+Data > Data2  : 1
+
+Testing Node functions
+Testing Node Constructors
+Node data: (A, 1) Node next: 0
+Node data: (B, 2) Node next: 0x5a16c70
+Testing Copy Constructor
+Node data: (B, 2) Node next: 0x5a16c70
+Test getData : (B, 2)
+Test getNext : 0x5a16c70
+Testing setNext
+0x5a16d60 should equal 0x5a16d60
+== should be 1 : 1
+!= should be 0 : 0
+==14991== Invalid free() / delete / delete[] / realloc()
+==14991==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14991==    by 0x402F36: Node::~Node() (in /net/metis/home2/murphs95/Desktop/Lab3/a.out)
+==14991==    by 0x402B77: testNode() (in /net/metis/home2/murphs95/Desktop/Lab3/a.out)
+==14991==    by 0x401A41: main (in /net/metis/home2/murphs95/Desktop/Lab3/a.out)
+==14991==  Address 0x5a16c20 is 0 bytes inside a block of size 8 free'd
+==14991==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14991==    by 0x402F36: Node::~Node() (in /net/metis/home2/murphs95/Desktop/Lab3/a.out)
+==14991==    by 0x402DFD: testNodeEquals(Node&) (in /net/metis/home2/murphs95/Desktop/Lab3/a.out)
+==14991==    by 0x402B66: testNode() (in /net/metis/home2/murphs95/Desktop/Lab3/a.out)
+==14991==    by 0x401A41: main (in /net/metis/home2/murphs95/Desktop/Lab3/a.out)
+==14991== 
+==14991== Invalid free() / delete / delete[] / realloc()
+==14991==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14991==    by 0x402F36: Node::~Node() (in /net/metis/home2/murphs95/Desktop/Lab3/a.out)
+==14991==    by 0x402BA9: testNode() (in /net/metis/home2/murphs95/Desktop/Lab3/a.out)
+==14991==    by 0x401A41: main (in /net/metis/home2/murphs95/Desktop/Lab3/a.out)
+==14991==  Address 0x5a16cc0 is 0 bytes inside a block of size 8 free'd
+==14991==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14991==    by 0x402F36: Node::~Node() (in /net/metis/home2/murphs95/Desktop/Lab3/a.out)
+==14991==    by 0x402B90: testNode() (in /net/metis/home2/murphs95/Desktop/Lab3/a.out)
+==14991==    by 0x401A41: main (in /net/metis/home2/murphs95/Desktop/Lab3/a.out)
+==14991== 
+==14991== 
+==14991== HEAP SUMMARY:
+==14991==     in use at exit: 0 bytes in 0 blocks
+==14991==   total heap usage: 812 allocs, 814 frees, 8,664 bytes allocated
+==14991== 
+==14991== All heap blocks were freed -- no leaks are possible
+==14991== 
+==14991== For counts of detected and suppressed errors, rerun with: -v
+==14991== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 2 from 2)
+murphs95@uw1-320-10:~/Desktop/Lab3$ exit
+
+Script done on Sun 09 Feb 2014 08:45:34 PM PST

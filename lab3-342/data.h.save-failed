@@ -1,0 +1,34 @@
+/**
+@file data.h
+@author James Murphree <murphs95@uw.edu>
+@section Assignment Lab3
+@section Due Feb. 9th 2013
+*/
+
+#ifndef DATA_H
+#define DATA_H
+
+
+class Data {
+
+public:
+    Data(char character, int space);
+    ~Data();
+
+    bool operator == (const Data& rightSide);
+    bool operator != (const Data& rightSide);
+    bool operator <= (const Data& rightSide);
+    char getChar();
+    int getSpace();
+    bool insert();
+    bool remove();
+    bool equals(char character, int space);
+
+private:
+    char character;
+    int space;
+
+};
+
+
+#endif

@@ -1,0 +1,282 @@
+
+#ifndef SORTSETARRAY_CPP
+#define SORTSETARRAY_CPP
+
+#include "SortSetArray.h"
+
+
+
+int SortSetArray::DEFAULTMAXITEMS = 10;
+
+// Constructors
+
+SortSetArray::SortSetArray():itemCount(0), maxItems(DEFAULTMAXITEMS) {
+    sortedArrayPointer = new int[maxItems];
+    for (int i = 0; i < maxItems; i++) {
+        sortedArrayPointer[i] = -1;
+    }
+}
+
+SortSetArray::SortSetArray(int input1):itemCount(0), maxItems(DEFAULTMAXITEMS) {
+    sortedArrayPointer = new int[DEFAULTMAXITEMS];
+    int input[] = {input1};
+    initialize(input, 1);
+}
+
+SortSetArray::SortSetArray(int input1, int input2)
+        :itemCount(0), maxItems(DEFAULTMAXITEMS) {
+    sortedArrayPointer = new int[DEFAULTMAXITEMS];
+    int input[] = {input1, input2};
+    initialize(input, 2);
+}
+
+// 3 input constructor
+SortSetArray::SortSetArray(int input1, int input2, int input3)
+        :itemCount(0), maxItems(DEFAULTMAXITEMS) {
+    sortedArrayPointer = new int[DEFAULTMAXITEMS];
+    int input[] = {input1, input2, input3};
+    initialize(input, 3);
+}
+
+SortSetArray::SortSetArray(int input1, int input2, int input3, int input4
+        ):itemCount(0), maxItems(DEFAULTMAXITEMS) {
+    sortedArrayPointer = new int[DEFAULTMAXITEMS];
+    int input[] = {input1, input2, input3, input4};
+    initialize(input, 4);
+}
+
+SortSetArray::SortSetArray(int input1, int input2, int input3, int input4,
+        int input5):itemCount(0), maxItems(DEFAULTMAXITEMS) {
+    sortedArrayPointer = new int[DEFAULTMAXITEMS];
+    int input[] = {input1, input2, input3, input4, input5};
+    initialize(input, 5);
+}
+
+SortSetArray::SortSetArray(const SortSetArray& input):itemCount(0), maxItems(DEFAULTMAXITEMS) {
+    sortedArrayPointer = new int[DEFAULTMAXITEMS];
+}
+
+
+// Deconstructor
+
+
+// We might have to run through and delete each separate element
+SortSetArray::~SortSetArray() {
+    *sortedArrayPointer = 0;
+    delete[] sortedArrayPointer;
+    sortedArrayPointer = NULL;
+}
+
+// Methods
+
+bool SortSetArray::insert(int newInt) {
+    if (itemCount == maxItems) {
+        increaseSize();
+    }
+    if (newInt < 0) {
+        return false;
+    }
+    // if empty
+    if (isEmpty()) {
+        sortedArrayPointer[0] = newInt;
+        itemCount++;
+        return true;
+    }
+    // if not biggest
+    for (int i = 0; i < itemCount; i++) {
+        if (newInt == sortedArrayPointer[i]) {
+            return false;
+        }
+        if (newInt < sortedArrayPointer[i]) {
+            shiftUp(i);
+            sortedArrayPointer[i] = newInt;
+            itemCount++;
+            return true;
+        }
+    }
+    // if biggest
+    if (newInt != sortedArrayPointer[itemCount - 1]) {
+        sortedArrayPointer[itemCount] = newInt;
+        itemCount++;
+        return true;
+    }
+    return false;
+}
+
+
+bool SortSetArray::remove(int intRemove) {
+    for (int i = 0; i < itemCount; i++) {
+        if (sortedArrayPointer[i] == intRemove) {
+            shiftDown(i);
+            itemCount--;
+            sortedArrayPointer[itemCount] = -1;
+            return true;
+        }
+        if (sortedArrayPointer[i] > intRemove) {
+            return false;
+        }
+    }
+    return false;
+}
+
+bool SortSetArray::isEmpty() {
+    return itemCount == 0;
+}
+
+bool SortSetArray::isInSet(int intFind) {
+    for (int i = 0; i < itemCount; i++) {
+        if (intFind == sortedArrayPointer[i]) {
+            return true;
+        }
+        if (intFind < sortedArrayPointer[i]) {
+            return false;
+        }
+    }
+    return false;
+}
+
+SortSetArray& SortSetArray::operator+(SortSetArray& rightSide) {
+    SortSetArray* newSortedArrayPointer = new SortSetArray();
+    for (int i = 0; i < itemCount; i++) {
+        newSortedArrayPointer->insert(sortedArrayPointer[i]);
+    }
+    for (int i = 0; i < rightSide.itemCount; i++) {
+        newSortedArrayPointer->insert(rightSide.sortedArrayPointer[i]);
+    }
+    return *newSortedArrayPointer;
+}
+
+SortSetArray& SortSetArray::operator-(SortSetArray& rightSide) {
+    SortSetArray* newSortedArrayPointer = new SortSetArray();
+    int counter = 0;
+    for (int i = 0; i < itemCount; i++) {
+        while (rightSide.sortedArrayPointer[counter] < sortedArrayPointer[i]) {
+            counter++;
+        }
+        if (rightSide.sortedArrayPointer[counter] != sortedArrayPointer[i]) {
+            newSortedArrayPointer->insert(sortedArrayPointer[i]);
+        }
+    }
+    return *newSortedArrayPointer;
+}
+
+
+SortSetArray& SortSetArray::operator*(SortSetArray& rightSide) {
+    SortSetArray* newSortedArrayPointer = new SortSetArray();
+    int counter = 0;
+    for (int i = 0; i < itemCount; i++) {
+        while (rightSide.sortedArrayPointer[counter] < sortedArrayPointer[i]) {
+            counter++;
+        }
+        if (rightSide.sortedArrayPointer[counter] == sortedArrayPointer[i]) {
+            newSortedArrayPointer->insert(sortedArrayPointer[i]);
+        }
+    }
+    return *newSortedArrayPointer;
+}
+
+SortSetArray& SortSetArray::operator+=(SortSetArray& rightSide) {
+    for (int i = 0; i < rightSide.itemCount; i++) {
+        this->insert(rightSide.sortedArrayPointer[i]);
+    }
+    return *this;
+}
+
+
+SortSetArray& SortSetArray::operator-=(SortSetArray& rightSide) {
+    int counter = 0;
+    for (int i = 0; i < itemCount; i++) {
+        while (rightSide.sortedArrayPointer[counter] < sortedArrayPointer[i]) {
+            counter++;
+        }
+        if (rightSide.sortedArrayPointer[counter] == sortedArrayPointer[i]) {
+            this->remove(sortedArrayPointer[i--]);
+        }
+    }
+    return *this;
+}
+
+SortSetArray& SortSetArray::operator*=(SortSetArray& rightSide) {
+    int counter = 0;
+    for (int i = 0; i < itemCount; i++) {
+        while (rightSide.sortedArrayPointer[counter] < sortedArrayPointer[i]) {
+            counter++;
+        }
+        if (rightSide.sortedArrayPointer[counter] != sortedArrayPointer[i]) {
+            this->remove(sortedArrayPointer[i--]);
+        }
+    }
+    return *this;
+}
+
+SortSetArray& SortSetArray::operator=(SortSetArray& rightSide) {
+    if (*this != rightSide) {
+        *sortedArrayPointer = 0;
+        delete[] sortedArrayPointer;
+        maxItems = rightSide.maxItems;
+        itemCount = rightSide.itemCount;
+        sortedArrayPointer = new int[maxItems];
+        for (int i = 0; i < maxItems; i++) {
+            sortedArrayPointer[i] = rightSide.sortedArrayPointer[i];
+        }
+    }
+    return *this;
+}
+
+bool SortSetArray::operator==(SortSetArray& rightSide) {
+    if (itemCount != rightSide.itemCount) {
+        return false;
+    }
+    for (int i = 0; i < itemCount; i++) {
+        if (sortedArrayPointer[i] != rightSide.sortedArrayPointer[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool SortSetArray::operator!=(SortSetArray& rightSide) {
+    return !(*this == rightSide);
+}
+
+void SortSetArray::print() {
+    for (int i = 0; i < itemCount; i++) {
+        cout << sortedArrayPointer[i] << ", ";
+    }
+    cout << endl << endl;
+}
+
+// Private Methods
+
+void SortSetArray::shiftUp(int insertIndex) {
+    for (int i = itemCount; i > insertIndex; i--) {
+        sortedArrayPointer[i] = sortedArrayPointer[i - 1];
+    }
+}
+
+void SortSetArray::shiftDown(int removeIndex) {
+    for (int i = removeIndex; i < itemCount; i++) {
+        sortedArrayPointer[i] = sortedArrayPointer[i + 1];
+    }
+}
+
+void SortSetArray::increaseSize() {
+    int* temp = sortedArrayPointer;
+    sortedArrayPointer = new int[maxItems * 2];
+    for (int i = 0; i < itemCount; i++) {
+        sortedArrayPointer[i] = temp[i];
+    }
+    *temp = 0;
+    delete[] temp;
+    temp = NULL;
+}
+
+void SortSetArray::initialize(int input[], int count) {
+    for (int i = 0; i < count; i++) {
+        this->insert(input[i]);
+    }
+}
+
+
+
+#endif
