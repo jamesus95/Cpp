@@ -1,0 +1,371 @@
+Script started on Sun 23 Feb 2014 07:57:42 PM PST
+murphs95@uw1-320-10:~/Desktop/lab4$ g++ 0[K-g -Wall lab4test.cpp
+murphs95@uw1-320-10:~/Desktop/lab4$ valgrind a[K./a.out
+==18445== Memcheck, a memory error detector
+==18445== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==18445== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==18445== Command: ./a.out
+==18445== 
+pre-sort A = 4 7 8 6 4 6 7 3 10 2 
+A = 2 3 4 4 6 6 7 7 8 10 
+pre-sort B = 1 7 3 7 2 9 8 10 3 1 
+B = 1 1 2 3 3 7 7 8 9 10 
+pre-sort C = 3 4 8 6 10 3 3 9 10 8 
+==18445== Mismatched free() / delete / delete []
+==18445==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4012EA: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:78)
+==18445==    by 0x402754: testRecurMergeSort(int, bool) (lab4test.cpp:177)
+==18445==    by 0x4022B4: testSorts(int, bool) (lab4test.cpp:81)
+==18445==    by 0x40224F: main (lab4test.cpp:71)
+==18445==  Address 0x5a07200 is 0 bytes inside a block of size 20 alloc'd
+==18445==    at 0x4C2AAA4: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4011D5: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:65)
+==18445==    by 0x402754: testRecurMergeSort(int, bool) (lab4test.cpp:177)
+==18445==    by 0x4022B4: testSorts(int, bool) (lab4test.cpp:81)
+==18445==    by 0x40224F: main (lab4test.cpp:71)
+==18445== 
+==18445== Mismatched free() / delete / delete []
+==18445==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4012F6: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:78)
+==18445==    by 0x402754: testRecurMergeSort(int, bool) (lab4test.cpp:177)
+==18445==    by 0x4022B4: testSorts(int, bool) (lab4test.cpp:81)
+==18445==    by 0x40224F: main (lab4test.cpp:71)
+==18445==  Address 0x5a07260 is 0 bytes inside a block of size 20 alloc'd
+==18445==    at 0x4C2AAA4: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x401230: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:68)
+==18445==    by 0x402754: testRecurMergeSort(int, bool) (lab4test.cpp:177)
+==18445==    by 0x4022B4: testSorts(int, bool) (lab4test.cpp:81)
+==18445==    by 0x40224F: main (lab4test.cpp:71)
+==18445== 
+C = 3 3 3 4 6 8 8 9 10 10 
+pre-sort D = 4 7 2 3 10 4 2 10 5 8 
+D = 2 2 3 4 4 5 7 8 10 10 
+pre-sort A = 10 9 8 7 6 5 4 3 2 1 
+A = 1 2 3 4 5 6 7 8 9 10 
+pre-sort B = 10 9 8 7 6 5 4 3 2 1 
+B = 1 2 3 4 5 6 7 8 9 10 
+pre-sort C = 10 9 8 7 6 5 4 3 2 1 
+C = 1 2 3 4 5 6 7 8 9 10 
+pre-sort D = 10 9 8 7 6 5 4 3 2 1 
+D = 1 2 3 4 5 6 7 8 9 10 
+==18445== Mismatched free() / delete / delete []
+==18445==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4012EA: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:78)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445==  Address 0x5a0afa0 is 0 bytes inside a block of size 12 alloc'd
+==18445==    at 0x4C2AAA4: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4011D5: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:65)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445== 
+==18445== Mismatched free() / delete / delete []
+==18445==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4012F6: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:78)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445==  Address 0x5a0aff0 is 0 bytes inside a block of size 16 alloc'd
+==18445==    at 0x4C2AAA4: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x401230: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:68)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445== 
+==18445== Mismatched free() / delete / delete []
+==18445==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4012EA: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:78)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445==  Address 0x5a0b040 is 0 bytes inside a block of size 16 alloc'd
+==18445==    at 0x4C2AAA4: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4011D5: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:65)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445== 
+==18445== Mismatched free() / delete / delete []
+==18445==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4012F6: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:78)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445==  Address 0x5a0b090 is 0 bytes inside a block of size 16 alloc'd
+==18445==    at 0x4C2AAA4: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x401230: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:68)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445== 
+==18445== Mismatched free() / delete / delete []
+==18445==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4012EA: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:78)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445==  Address 0x5a0b1a0 is 0 bytes inside a block of size 16 alloc'd
+==18445==    at 0x4C2AAA4: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4011D5: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:65)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445== 
+==18445== Mismatched free() / delete / delete []
+==18445==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4012F6: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:78)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445==  Address 0x5a0b1f0 is 0 bytes inside a block of size 16 alloc'd
+==18445==    at 0x4C2AAA4: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x401230: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:68)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445== 
+==18445== Mismatched free() / delete / delete []
+==18445==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4012EA: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:78)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445==  Address 0x5a0b240 is 0 bytes inside a block of size 16 alloc'd
+==18445==    at 0x4C2AAA4: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4011D5: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:65)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445== 
+==18445== Mismatched free() / delete / delete []
+==18445==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4012F6: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:78)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445==  Address 0x5a0b290 is 0 bytes inside a block of size 16 alloc'd
+==18445==    at 0x4C2AAA4: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x401230: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:68)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445== 
+==18445== Mismatched free() / delete / delete []
+==18445==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4012EA: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:78)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445==  Address 0x5a09d00 is 0 bytes inside a block of size 1,000 alloc'd
+==18445==    at 0x4C2AAA4: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4011D5: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:65)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445== 
+==18445== Mismatched free() / delete / delete []
+==18445==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4012F6: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:78)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445==  Address 0x5a0a130 is 0 bytes inside a block of size 1,000 alloc'd
+==18445==    at 0x4C2AAA4: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x401230: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:68)
+==18445==    by 0x40129C: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:73)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445== 
+==18445== Mismatched free() / delete / delete []
+==18445==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4012EA: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:78)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445==  Address 0x5a11460 is 0 bytes inside a block of size 1,000 alloc'd
+==18445==    at 0x4C2AAA4: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4011D5: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:65)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445== 
+==18445== Mismatched free() / delete / delete []
+==18445==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4012F6: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:78)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445==  Address 0x5a11890 is 0 bytes inside a block of size 1,000 alloc'd
+==18445==    at 0x4C2AAA4: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x401230: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:68)
+==18445==    by 0x4012B9: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:74)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445== 
+==18445== Mismatched free() / delete / delete []
+==18445==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4012EA: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:78)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445==  Address 0x5a08ce0 is 0 bytes inside a block of size 2,000 alloc'd
+==18445==    at 0x4C2AAA4: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4011D5: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:65)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445== 
+==18445== Mismatched free() / delete / delete []
+==18445==    at 0x4C2A44B: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x4012F6: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:78)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445==  Address 0x5a094f0 is 0 bytes inside a block of size 2,000 alloc'd
+==18445==    at 0x4C2AAA4: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18445==    by 0x401230: RecursiveMergeSort::sort(int*, int, bool, int) (recursivemergesort.cpp:68)
+==18445==    by 0x40114B: recursivemergesort(int*, int, bool, int) (recursivemergesort.cpp:43)
+==18445==    by 0x40290C: testBubbleOpt(int, bool) (lab4test.cpp:210)
+==18445==    by 0x40226D: main (lab4test.cpp:73)
+==18445== 
+Bubble time for 5: 0.2
+Bubble time for 7: 0.19
+Bubble time for 10: 0.14
+Bubble time for 15: 0.15
+Bubble time for 20: 0.14
+Bubble time for 25: 0.14
+Bubble time for 30: 0.14
+==18445== 
+==18445== HEAP SUMMARY:
+==18445==     in use at exit: 0 bytes in 0 blocks
+==18445==   total heap usage: 61,814 allocs, 61,814 frees, 7,409,024 bytes allocated
+==18445== 
+==18445== All heap blocks were freed -- no leaks are possible
+==18445== 
+==18445== For counts of detected and suppressed errors, rerun with: -v
+==18445== ERROR SUMMARY: 61544 errors from 16 contexts (suppressed: 2 from 2)
+murphs95@uw1-320-10:~/Desktop/lab4$ exit
+
+Script done on Sun 23 Feb 2014 07:58:14 PM PST

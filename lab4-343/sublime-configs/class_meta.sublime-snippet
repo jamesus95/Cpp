@@ -1,0 +1,17 @@
+<snippet>
+    <content><![CDATA[
+//--------------- Class Description -----------------
+/**
+ * @class ${1:Class Name}
+ * Purpose:         ${2:Class Purpose}
+ *
+ * Inherit from:    ${3:Parents}
+ * Inherited by:    ${4:Children}
+ *
+ *///-------------------------------------------------
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>/classmeta</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

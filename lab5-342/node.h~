@@ -1,0 +1,42 @@
+#ifndef NODE_H
+#define NODE_H
+
+#include <iostream>
+#include <string>
+#include "nodeData.h"
+
+using namespace std;
+
+class Node {
+
+	friend ostream& operator<< (ostream& out, const Node& node);
+
+public:
+	Node(string token);
+	Node(string token, Node* left, Node* right);
+	Node(string token, Node* left, Node* right, bool threadR);
+	Node(const Node& other);
+	~Node();
+
+	void setLeft(Node* left);
+	void setRight(Node* right, bool rightThread = false);
+
+	Node* getLeft() const;
+	Node* getRight() const;
+	NodeData* getData() const;
+
+	bool isThreaded() const;
+
+private:
+	NodeData* data;
+	Node* left;
+	Node* right;
+
+	// experimental
+	// bool leftThread;		NO LEFT THREAD!
+	bool isThread;
+};
+
+#include "node.cpp"
+
+#endif

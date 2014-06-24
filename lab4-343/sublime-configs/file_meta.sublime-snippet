@@ -1,0 +1,21 @@
+<snippet>
+    <content><![CDATA[
+//-------------------- Metadata --------------------
+/**
+ * @file        $TM_FILENAME
+ * Purpose:     ${1:Purpose of File}
+ *
+ * @author      James Murphree <murphs95@uw.edu>
+ * @author      Vu Dinh <vdinh143@uw.edu>
+ * @date        ${2:June 06 2014}
+ * @copyright   WTFPLv2.1
+ *
+ * Note: Private helpers are typically found under the routine(s)
+ * that uses them.
+ *///-----------------------------------------------
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>/filemeta</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

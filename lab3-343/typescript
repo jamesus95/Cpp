@@ -1,0 +1,151 @@
+Script started on Thu 01 May 2014 09:46:37 PM PDT
+[1;34m
+[1;34m               +                
+[1;34m               #                
+[1;34m              ###               
+[1;34m             #####              
+[1;34m             ######             
+[1;34m            ; #####;            [1;34mUser: [0mkafeaulait
+[1;34m           +##.#####            [1;34mHostname: [0mcromarch
+[1;34m          +##########           [1;34mDistro: [0mArch Linux
+[1;34m         ######[0;34m#####[1;34m##;         [1;34mKernel: [0m3.14.1-1-ARCH
+[1;34m        ###[0;34m############[1;34m+        [1;34mUptime: [0m0:41
+[1;34m       #[0;34m######   #######        [1;34mWindow Manager: [0m
+[0;34m     .######;     ;###;`".      [1;34mDesktop Environment: [0mGNOME
+[0;34m    .#######;     ;#####.       [1;34mShell: [0m/usr/bin/zsh
+[0;34m    #########.   .########`     [1;34mTerminal: [0mxterm-256color
+[0;34m   ######'           '######    [1;34mPackages: [0m730
+[0;34m  ;####                 ####;   [1;34mCPU: [0mIntel(R) Celeron(R) 2955U @ 1.40GHz
+[0;34m  ##'                     '##   [1;34mRAM: [0m[0;33m1311 MB [0m/ 3898 MB 
+[0;34m #'                         `#  [1;34mDisk: [0m[0;33m7.7G [0m/ 15G
+[0m
+[1m[7m%[27m[1m[0m                                                                                ]2;kafeaulait@cromarch: ~/Documents/css343/lab3]1;..s/css343/lab3[0m[27m[24m[J
+[38;5;239m╭─────────────────────────────────────────────────────
+│ [00m[38;5;033mkafeaulait[00m [38;5;239mat[00m [38;5;202mlocalhost[00m [38;5;239min[00m [1m[38;5;214m~/Documents/css343/lab3[00m [38;5;239mon[00m master[38;5;196m✘✘✘[00m 
+[38;5;239m╰───[00m➤ [K[?1h=gg++ -Wall -g lab3.coo                lab3.cpp graphm.cpp graphl.cpp nodedata.cpp[?1l>
+]2;g++ lab3.cpp graphm.cpp graphl.cpp nodedata.cpp]1;g++[1m[7m%[27m[1m[0m                                                                                ]2;kafeaulait@cromarch: ~/Documents/css343/lab3]1;..s/css343/lab3[0m[27m[24m[J
+[38;5;239m╭─────────────────────────────────────────────────────
+│ [00m[38;5;033mkafeaulait[00m [38;5;239mat[00m [38;5;202mlocalhost[00m [38;5;239min[00m [1m[38;5;214m~/Documents/css343/lab3[00m [38;5;239mon[00m master[38;5;196m✘✘✘[00m 
+[38;5;239m╰───[00m➤ [K[?1h=vvalgrind ./a.out[?1l>
+]2;valgrind ./a.out]1;valgrind==23066== Memcheck, a memory error detector
+==23066== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==23066== Using Valgrind-3.9.0 and LibVEX; rerun with -h for copyright info
+==23066== Command: ./a.out
+==23066== 
+============================== Part 1
+
+Description		From node   To node   Dijkstra's  path
+---------------------------------------------------------------
+Aurora and 85th
+		            1         2        40	  1  3  2
+		            1         3        20	  1  3
+		            1         4        50	  1  3  2  4
+		            1         5        30	  1  5
+Green Lake Starbucks
+		            2         1      ----
+		            2         3      ----
+		            2         4        10	  2  4
+		            2         5      ----
+Woodland Park Zoo
+		            3         1      ----
+		            3         2        20	  3  2
+		            3         4        30	  3  2  4
+		            3         5      ----
+Troll under bridge
+		            4         1      ----
+		            4         2      ----
+		            4         3      ----
+		            4         5      ----
+PCC
+		            5         1      ----
+		            5         2        20	  5  2
+		            5         3      ----
+		            5         4        25	  5  4
+---------------------------------------------------------------
+End of graph printout
+
+Printing shortest path 1 -> 4:          1         4        50	  1  3  2  4
+Aurora and 85th
+Woodland Park Zoo
+Green Lake Starbucks
+Troll under bridge
+
+Description		From node   To node   Dijkstra's  path
+---------------------------------------------------------------
+aaa
+		            1         2         9	  1  3  2
+		            1         3         5	  1  3
+bbb
+		            2         1      ----
+		            2         3        20	  2  3
+ccc
+		            3         1      ----
+		            3         2         4	  3  2
+---------------------------------------------------------------
+End of graph printout
+
+Printing shortest path 1 -> 4: 
+
+
+============================== Part 2
+
+Start of graph output
+---------------------------------------------------------------
+Node  1		Aurora and 85th
+   edge  1  2
+   edge  1  3
+   edge  1  5
+
+Node  2		Green Lake Starbucks
+   edge  2  4
+
+Node  3		Woodland Park Zoo
+   edge  3  2
+   edge  3  4
+
+Node  4		Troll under bridge
+
+Node  5		PCC
+   edge  5  2
+   edge  5  4
+
+---------------------------------------------------------------
+
+
+Depth-first Ordering: 1 2 4 3 5 
+
+
+Start of graph output
+---------------------------------------------------------------
+Node  1		aaa
+   edge  1  3
+   edge  1  2
+
+Node  2		bbb
+   edge  2  3
+
+Node  3		ccc
+   edge  3  2
+
+---------------------------------------------------------------
+
+
+Depth-first Ordering: 1 3 2 
+
+
+The program finished successfully.
+==23066== 
+==23066== HEAP SUMMARY:
+==23066==     in use at exit: 0 bytes in 0 blocks
+==23066==   total heap usage: 652 allocs, 652 frees, 512,988 bytes allocated
+==23066== 
+==23066== All heap blocks were freed -- no leaks are possible
+==23066== 
+==23066== For counts of detected and suppressed errors, rerun with: -v
+==23066== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)
+[1m[7m%[27m[1m[0m                                                                                ]2;kafeaulait@cromarch: ~/Documents/css343/lab3]1;..s/css343/lab3[0m[27m[24m[J
+[38;5;239m╭─────────────────────────────────────────────────────
+│ [00m[38;5;033mkafeaulait[00m [38;5;239mat[00m [38;5;202mlocalhost[00m [38;5;239min[00m [1m[38;5;214m~/Documents/css343/lab3[00m [38;5;239mon[00m master[38;5;196m✘✘✘[00m 
+[38;5;239m╰───[00m➤ [K[?1h=
+
+Script done on Thu 01 May 2014 09:47:06 PM PDT

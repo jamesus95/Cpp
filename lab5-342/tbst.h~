@@ -1,0 +1,57 @@
+#ifndef TBST_H
+#define TBST_H
+
+#include "node.h"
+
+using namespace std;
+
+class TBST {
+
+public:
+	// inner class
+	class Iterator {
+	public:
+		Iterator& operator++();
+		Iterator();
+		Iterator(Node* root);
+		~Iterator();
+		// void remove();
+	private:
+		Node* currentPtr;
+	};
+
+
+	TBST();
+	TBST(const TBST& other);
+	~TBST();
+
+	// iterator helpers
+	Iterator begin();
+	Iterator end();
+
+	void insert(string token);
+	bool remove(string token);
+	bool contains(string token) const;
+	bool isEmpty() const;
+
+	void iterativeIn() const;
+	void preOrder() const;
+	void inOrder() const;
+	void postOrder() const;
+
+private:
+	Node* root;
+
+	Node* popUp(node* node);
+	Node* find(Node* (*f)(Node*,string), Node* cur, bool findSpot, string s);
+	Node* insert(Node* node, string s);
+	Node* remove(Node* node, string s);
+	Node* contains(Node* node, string s);
+
+	void traverse(void (*f)(), Node* cur, int order);
+
+};
+
+#include "tbst.cpp"
+
+#endif
